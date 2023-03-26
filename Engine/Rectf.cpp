@@ -20,3 +20,4 @@ Rectf::Rectf(Vec2 top_left, float width, float height)
 	Rectf(top_left, Vec2(width, height))
 {
 }
+
