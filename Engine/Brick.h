@@ -5,10 +5,10 @@
 class Brick 
 {
 public:
-	Brick(Rectf rect_in, Color c_in);
+	Brick(const Rectf& rect_in, Color color_in);
 	void draw(Graphics& gfx) const;
 private:
 	Rectf rect;
-	Color c;
+	Color color;
 	bool destroyed = false;
 };
