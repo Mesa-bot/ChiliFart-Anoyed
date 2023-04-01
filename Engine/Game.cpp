@@ -26,7 +26,7 @@ Game::Game( MainWindow& wnd )
 	wnd( wnd ),
 	gfx( wnd ),
 	brick(Rectf(Vec2(100,150),Vec2(150,100)),Colors::Blue),
-	ball(Vec2(200, 100), Vec2(0, 0))
+	ball(Vec2(200, 100), Vec2(200, 200))
 {
 }
 
@@ -40,6 +40,9 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	float dt = timer.Mark();
+	ball.Update(dt);
+	ball.collidingWithWall();
 }
 
 void Game::ComposeFrame()

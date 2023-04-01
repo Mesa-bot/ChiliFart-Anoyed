@@ -25,6 +25,7 @@
 #include "Graphics.h"
 #include "Brick.h"
 #include "Ball.h"
+#include "FrameTimer.h"
 
 class Game
 {
@@ -45,6 +46,7 @@ private:
 	/********************************/
 	/*  User Variables              */
 	/********************************/
+	FrameTimer timer;
 	Brick brick;
 	Ball ball;
 };
