@@ -26,7 +26,8 @@ Game::Game( MainWindow& wnd )
 	wnd( wnd ),
 	gfx( wnd ),
 	brick(Rectf(Vec2(100,150),Vec2(150,100)),Colors::Blue),
-	ball(Vec2(200, 100), Vec2(200, 200))
+	ball(Vec2(200, 100), Vec2(100, 100)),
+	bounce( L"\Sounds\\baba.wav")
 {
 }
 
@@ -44,7 +45,8 @@ void Game::UpdateModel()
 	ball.Update(dt);
 	if (ball.collidingWithWall())
 	{
-
+		bounce.StopAll();
+		bounce.Play(1.0f, 0.1f);
 	}
 }
 
