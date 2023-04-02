@@ -42,7 +42,10 @@ void Game::UpdateModel()
 {
 	float dt = timer.Mark();
 	ball.Update(dt);
-	ball.collidingWithWall();
+	if (ball.collidingWithWall())
+	{
+
+	}
 }
 
 void Game::ComposeFrame()
